@@ -348,6 +348,60 @@
 
 
 
+### **Reducing Dataset Size (For GitHub Upload)**
+
+
+
+**The original dataset files are large (50 mb and 62 mb respectively) and exceeds GitHub’s upload limit (25 mb).**
+
+**To reduce file size, you can keep only a portion of the dataset.**
+
+
+
+##### **Run the following script**
+
+
+
+###### **CODE :**
+
+
+
+**import pandas as pd**
+
+
+
+**fake = pd.read\_csv("Fake.csv")**
+
+**true = pd.read\_csv("True.csv")**
+
+
+
+**fake = fake.head(3000)**
+
+**true = true.head(3000)**
+
+
+
+**fake.to\_csv("Fake.csv", index=False)**
+
+**true.to\_csv("True.csv", index=False)**
+
+
+
+**print("Dataset reduced successfully!")**
+
+
+
+###### **What this does:**
+
+
+
+* **Keeps only the first 3000 rows**
+* **Reduces file size below GitHub limit**
+* **Maintains enough data for training**
+
+
+
 ### **Future Improvements**
 
 
