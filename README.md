@@ -327,6 +327,12 @@
 
 
 
+1. ###### **Clone the Repository : https://github.com/Down-To-Eat/Fake-News-Detection-Using-Machine-Learning.git**
+2. ###### **Verify Python Installation: Python 3.14.3**
+3. ###### **Run the Application according to given steps**
+
+
+
 ##### **Step 1: Install Requirements**
 
 
