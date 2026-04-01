@@ -90,11 +90,65 @@
 
 
 
+### **Reducing Dataset Size (For GitHub Upload)**
+
+
+
+**The original dataset files are large (50 mb and 62 mb respectively) and exceeds GitHub’s upload limit (25 mb).**
+
+**To reduce file size, you can keep only a portion of the dataset.**
+
+
+
+##### **Run the following script : Predict.py**
+
+
+
+###### **CODE :**
+
+
+
+**import pandas as pd**
+
+
+
+**fake = pd.read\_csv("Fake.csv")**
+
+**true = pd.read\_csv("True.csv")**
+
+
+
+**fake = fake.head(3000)**
+
+**true = true.head(3000)**
+
+
+
+**fake.to\_csv("Fake.csv", index=False)**
+
+**true.to\_csv("True.csv", index=False)**
+
+
+
+**print("Dataset reduced successfully!")**
+
+
+
+###### **What this does:**
+
+
+
+* **Keeps only the first 3000 rows**
+* **Reduces file size below GitHub limit**
+* **Maintains enough data for training**
+
+
+
 ### **Technologies Used**
 
 
 
-##### **Programming Language:** 
+##### **Programming Language:**
 
 
 
@@ -125,7 +179,7 @@
 
 
 
-### **1. Data Preprocessing** 
+### **1. Data Preprocessing**
 
 
 
@@ -272,7 +326,11 @@
 
 
 
-**RUN - pip install -r requirements.txt**
+###### **RUN -**
+
+
+
+**pip install -r requirements.txt**
 
 
 
@@ -280,11 +338,15 @@
 
 
 
-**RUN - python train\_model.py**
+###### **RUN -**
 
 
 
-###### **This will:**
+**python trainmodel.py**
+
+
+
+###### **This will :**
 
 
 
@@ -299,6 +361,26 @@
 
 
 
+**Step 3: Run Prediction**
+
+
+
+**RUN -**
+
+
+
+**python predict.py**
+
+
+
+**This will :**
+
+
+
+
+
+
+
 ### **Example**
 
 
@@ -307,7 +389,7 @@
 
 
 
-**Breaking News: WASHINGTON (Reuters) - Alabama Secretary of State John Merrill said he will certify Democratic Senator-elect Doug Jones as winner on Thursday despite opponent Roy Moore’s challenge, in a phone call on CNN. Moore, a conservative who had faced allegations of groping teenage girls when he was in his 30s, filed a court challenge late on Wednesday to the outcome of a U.S. Senate election he unexpectedly lost.** 
+**Breaking News: WASHINGTON (Reuters) - Alabama Secretary of State John Merrill said he will certify Democratic Senator-elect Doug Jones as winner on Thursday despite opponent Roy Moore’s challenge, in a phone call on CNN. Moore, a conservative who had faced allegations of groping teenage girls when he was in his 30s, filed a court challenge late on Wednesday to the outcome of a U.S. Senate election he unexpectedly lost.**
 
 
 
@@ -339,6 +421,7 @@
 
 * **Handling a large dataset**
 * **Cleaning messy text data**
+* **Reducing Dataset Size to fit GitHub File Upload Limit (25 MB)**
 * **Preventing overfitting**
 * **Making sure the dataset was properly arranged**
 
@@ -347,58 +430,6 @@
 **But solving these problems helped me learn more about machine learning.**
 
 
-
-### **Reducing Dataset Size (For GitHub Upload)**
-
-
-
-**The original dataset files are large (50 mb and 62 mb respectively) and exceeds GitHub’s upload limit (25 mb).**
-
-**To reduce file size, you can keep only a portion of the dataset.**
-
-
-
-##### **Run the following script : Predict.py**
-
-
-
-###### **CODE :**
-
-
-
-**import pandas as pd**
-
-
-
-**fake = pd.read\_csv("Fake.csv")**
-
-**true = pd.read\_csv("True.csv")**
-
-
-
-**fake = fake.head(3000)**
-
-**true = true.head(3000)**
-
-
-
-**fake.to\_csv("Fake.csv", index=False)**
-
-**true.to\_csv("True.csv", index=False)**
-
-
-
-**print("Dataset reduced successfully!")**
-
-
-
-###### **What this does:**
-
-
-
-* **Keeps only the first 3000 rows**
-* **Reduces file size below GitHub limit**
-* **Maintains enough data for training**
 
 
 
@@ -411,6 +442,7 @@
 
 
 * **Using Deep Learning models like LSTM or BERT**
+* **Increasing Dataset Size to upgrade and update the model**
 * **Creating a website or web app for this system**
 * **Detecting news in real time**
 * **Improving the accuracy of the model**
@@ -456,4 +488,5 @@
 5. **model.pkl**
 6. **vectorizer.pkl**
 7. **requirements.txt**
+8. **reducedataset.py**
 
