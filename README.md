@@ -12,6 +12,8 @@
 
 **This project aims to solve this problem by building a Machine Learning model that can automatically detect whether a news article is:**
 
+
+
 * **Real News**
 * **Fake News**
 
@@ -78,7 +80,8 @@
 * **text → Full news content**
 * **subject → Category of the news**
 * **date → Date when the news was published**
-* 
+
+
 
 ##### **Why I chose this dataset :**
 
@@ -94,9 +97,9 @@
 
 
 
-**The original dataset files are large (50 mb and 62 mb respectively) and exceeds GitHub’s upload limit (25 mb).**
+**The original dataset files are large (50 mb \[True.csv] and 62 mb \[False.csv] respectively) and exceeds GitHub’s upload limit (25 mb).**
 
-**To reduce file size, you can keep only a portion of the dataset.**
+**So we need to reduce file size, so that we can keep only a portion of the dataset while being within the upload limit.**
 
 
 
@@ -172,6 +175,8 @@
 * **numpy – for numerical operations**
 * **scikit-learn – for machine learning model**
 * **nltk – for text processing**
+* **string**
+* **pickle**
 
 
 
@@ -240,7 +245,7 @@
 
 
 
-**The model is trained using the file: train\_model.py**
+**The model is trained using the file: trainmodel.py**
 
 
 
@@ -334,6 +339,10 @@
 
 
 
+**This will download all the libraries required for the project.**
+
+
+
 ##### **Step 2: Train the Model**
 
 
@@ -350,22 +359,18 @@
 
 
 
-* **Train the model**
-* **Save model.pkl and vectorizer.pkl**
-* **Step 3: Run Prediction**
-* **python predict.py**
+1. **Load the dataset (Fake.csv and True.csv) and combines them into one dataset with labels (fake = 0, real = 1).**
+2. **It cleans and preprocesses the text by removing punctuation, converting to lowercase, and removing stopwords.**
+3. **The text is converted into numerical form using TF-IDF, and the model (Logistic Regression) is trained on this data.**
+4. **After training, it evaluates accuracy and saves the model as model.pkl and vectorizer.pkl for future predictions.**
 
 
 
-**Then enter any news text to check whether it is real or fake.**
+##### **Step 3: Run Prediction**
 
 
 
-**Step 3: Run Prediction**
-
-
-
-**RUN -**
+##### **RUN -**
 
 
 
@@ -373,9 +378,14 @@
 
 
 
-**This will :**
+###### **This will :**
 
 
+
+1. **Run the Python script, which loads the already trained model (model.pkl) and vectorizer (vectorizer.pkl).**
+2. **Take user input (news text) and cleans it (removes punctuation, stopwords, etc.).**
+3. **The cleaned text is converted into numbers using TF-IDF, so the model can understand it.**
+4. **The model then analyzes the input and predicts whether the news is Real or Fake, and displays the result.**
 
 
 
@@ -483,10 +493,10 @@
 
 1. **Fake.csv**
 2. **True.csv**
-3. **train\_model.py**
-4. **predict.py**
-5. **model.pkl**
-6. **vectorizer.pkl**
-7. **requirements.txt**
-8. **reducedataset.py**
+3. **requirements.txt**
+4. **reducedataset.py**
+5. **train\_model.py**
+6. **model.pkl**
+7. **vectorizer.pkl**
+8. **predict.py**
 
